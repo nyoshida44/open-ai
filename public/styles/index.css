@@ -1,0 +1,30 @@
+.index {
+  background-image: url("../images/qbkls.png");
+}
+
+div {
+  font-family: 'Roboto', sans-serif;
+}
+
+.quote {
+  width: 70%;
+  margin: 2.5em auto;
+  background: #7CB9E8;
+  padding: 2.5em;
+  text-align: center;
+  font-weight: 900;
+  color: #fff;
+  position:relative;
+  left: 5em;
+}
+
+.shp1:before {
+  content: "";
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid #7CB9E8;
+  border-top: 10px solid #7CB9E8;
+  border-bottom: 10px solid transparent;
+  left: -20px;
+  top: 30px;
+}
