@@ -2,7 +2,7 @@
   background-image: url("../images/qbkls.png");
 }
 
-h1, label, h5 {
+h1, label, h5, button {
   font-family: 'Koulen', cursive;
 }
 
@@ -33,26 +33,49 @@ h1, label, h5 {
   border: 1px solid blue;
 } 
 
-.robot-eyes.left {
+.robot-eyes{
   position: absolute;
   height: 20px;
   width: 20px;
   bottom: 10px;
-  left: 10px;
   background: radial-gradient(circle, yellow 15%, transparent 40%), #cc5;
   border: 1px solid blue;
   border-radius: 100%;
 }
 
+.robot-eyes.left {
+  left: 10px;
+}
+
 .robot-eyes.right {
-  position: absolute;
-  height: 20px;
-  width: 20px;
-  bottom: 10px;
   right: 10px;
-  background: radial-gradient(circle, yellow 15%, transparent 40%), #cc5;
+}
+
+.robot-body {
+  position: absolute;
+  width: 50px;
+  height: 30px;
+  bottom: 25px;
+  left: 12.5px;
+  background: #7CB9E8;
   border: 1px solid blue;
-  border-radius: 100%;
+}
+
+.robot-legs {
+  position: absolute;
+  width: 15px;
+  height: 25px;
+  bottom: 0px;
+  background: #7CB9E8;
+  border: 1px solid blue;
+}
+
+.robot-legs.left {
+  left: 20px;
+}
+
+.robot-legs.right {
+  left: 40px;
 }
 
 .quote {
