@@ -1,5 +1,4 @@
 import express from "express";
-
 import { Configuration, OpenAIApi } from "openai";
 import path from 'path';
 import {fileURLToPath} from 'url';
@@ -10,6 +9,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 app.set("view engine", "ejs");
+app.use(express.json());
 
 app.use("/public", express.static(__dirname + "/public"));
 
@@ -18,7 +18,8 @@ app.get("/", (req, res) => {
 });
 
 app.post("/generate", (req, res) => {
-  console.log(req.prompt);
+  console.log(req.body);
+  res.json();
   // const configuration = new Configuration({
   //   apiKey: process.env.OPENAI_API_KEY,
   // });
