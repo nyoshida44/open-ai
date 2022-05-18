@@ -1,4 +1,5 @@
 import express from "express";
+import 'dotenv/config';
 import { Configuration, OpenAIApi } from "openai";
 import path from 'path';
 import {fileURLToPath} from 'url';
@@ -18,22 +19,26 @@ app.get("/", (req, res) => {
 });
 
 app.post("/generate", (req, res) => {
-  console.log(req.body);
-  res.json();
-  // const configuration = new Configuration({
-  //   apiKey: process.env.OPENAI_API_KEY,
-  // });
-  // const openai = new OpenAIApi(configuration);
-  // const response = openai.createCompletion("text-davinci-002", {
-  //   prompt: "You: What have you been up to?\nFriend: Watching old movies.\nYou: Did you watch anything interesting?\nFriend:",
-  //   temperature: 0.5,
-  //   max_tokens: 60,
-  //   top_p: 1.0,
-  //   frequency_penalty: 0.5,
-  //   presence_penalty: 0.0,
-  //   stop: ["You:"],
-  // });
-  // res.status(200).json({ result: response.data.choices[0].text });
+
+  let prompt = req.body.prompt;
+  const configuration = new Configuration({
+    apiKey: process.env.OPENAI_API_KEY,
+  });
+
+  const openai = new OpenAIApi(configuration);
+  async function generate() {
+    const response = await openai.createCompletion("text-davinci-002", {
+      prompt: `You: ${prompt}`,
+      temperature: 0.5,
+      max_tokens: 60,
+      top_p: 1.0,
+      frequency_penalty: 0.5,
+      presence_penalty: 0.0,
+      stop: ["You:"],
+    })
+    res.status(200).json({ result: response.data.choices[0].text });
+  }
+  generate();
 });
 
 app.listen(PORT, () => {
