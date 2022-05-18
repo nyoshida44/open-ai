@@ -11,14 +11,14 @@ AI Buddy will also autocomplete your messages if needs be.
 
 ## Dependencies
 
-Node 10.x or above
-NPM 5.x or above
+- Node 10.x or above
+- NPM 5.x or above
 
-"dotenv": "^16.0.1",
-"ejs": "^3.1.7",
-"express": "^4.18.1",
-"jquery": "^3.6.0",
-"openai": "^2.0.5"
+- "dotenv": "^16.0.1",
+- "ejs": "^3.1.7",
+- "express": "^4.18.1",
+- "jquery": "^3.6.0",
+- "openai": "^2.0.5"
 
 ## ScreenShot
 
