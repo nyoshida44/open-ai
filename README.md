@@ -9,6 +9,17 @@ AI Buddy will also autocomplete your messages if needs be.
 
 [Open AI Website](https://openai.com/)
 
+## Dependencies
+
+Node 10.x or above
+NPM 5.x or above
+
+"dotenv": "^16.0.1",
+"ejs": "^3.1.7",
+"express": "^4.18.1",
+"jquery": "^3.6.0",
+"openai": "^2.0.5"
+
 ## ScreenShot
 
-!["Screenshot"]()
+!["Screenshot"](https://github.com/nyoshida44/open-ai/blob/master/public/images/openai.png)
