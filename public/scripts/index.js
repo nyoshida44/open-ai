@@ -10,8 +10,8 @@ $(document).ready(function() {
     const $robotEyesRight = $('<div class="robot-eyes right"></div>');
     const $robotNeck = $('<div class="robot-neck"></div>');
     const $robotBody = $('<div class="robot-body"></div>');
-    const $robotArmsLeft = $('<div class="robot-arms left"></div>');
-    const $robotArmsRight = $('<div class="robot-arms right"></div>');
+    const $robotArmsLeft = $('<div class="robot-hands left"></div>');
+    const $robotArmsRight = $('<div class="robot-hands right"></div>');
     const $robotLegsLeft = $('<div class="robot-legs left"></div>');
     const $robotLegsRight = $('<div class="robot-legs right"></div>');
 
