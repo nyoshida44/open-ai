@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   const createResponse = (response) => {
 
-    const $responseDiv = $('<div class="col-6 d-flex align-items-center"></div>');
+    const $responseDiv = $('<div class="col-12 d-flex align-items-center"></div>');
 
     const $robot = $('<div class="robot"></div>');
     const $robotHead = $('<div class="robot-head"></div>');
@@ -10,6 +10,8 @@ $(document).ready(function() {
     const $robotEyesRight = $('<div class="robot-eyes right"></div>');
     const $robotNeck = $('<div class="robot-neck"></div>');
     const $robotBody = $('<div class="robot-body"></div>');
+    const $robotArmsLeft = $('<div class="robot-arms left"></div>');
+    const $robotArmsRight = $('<div class="robot-arms right"></div>');
     const $robotLegsLeft = $('<div class="robot-legs left"></div>');
     const $robotLegsRight = $('<div class="robot-legs right"></div>');
 
@@ -21,6 +23,8 @@ $(document).ready(function() {
     $robot.append($robotHead);
     $robot.append($robotNeck);
     $robot.append($robotBody);
+    $robot.append($robotArmsLeft);
+    $robot.append($robotArmsRight);
     $robot.append($robotLegsLeft);
     $robot.append($robotLegsRight);
 
@@ -41,7 +45,7 @@ $(document).ready(function() {
     })
     .success((response) => {
       console.log(response.result);
-      $('#ai-buddy').append(createResponse(response.result))
+      $('#response-area').prepend(createResponse(response.result));
     })
   })
 });
