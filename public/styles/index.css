@@ -61,6 +61,24 @@ h1, label, h5, button {
   border: 1px solid blue;
 }
 
+.robot-hands {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  bottom: 30px;
+  background: #7CB9E8;
+  border: 1px solid blue;
+  border-radius: 100%;
+}
+
+.robot-hands.left {
+  left: 0px;
+}
+
+.robot-hands.right {
+  left: 55px;
+}
+
 .robot-legs {
   position: absolute;
   width: 15px;
