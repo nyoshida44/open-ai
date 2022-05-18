@@ -36,7 +36,8 @@ $(document).ready(function() {
 
   $("#submit").on("click", function(event) {
     event.preventDefault();
-    let prompt = document.getElementById("prompt-area").value;
+    let prompt = $('#prompt-area').val()
+    $('#prompt-area').val('')
     $.ajax({
       type: "POST",
       contentType: "application/json",
