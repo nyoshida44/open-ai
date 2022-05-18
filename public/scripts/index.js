@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  const createResponse = (response) => {
+  const createResponse = (prompt, split, response) => {
 
     const $responseDiv = $('<div class="col-12 d-flex align-items-center"></div>');
 
@@ -15,7 +15,7 @@ $(document).ready(function() {
     const $robotLegsLeft = $('<div class="robot-legs left"></div>');
     const $robotLegsRight = $('<div class="robot-legs right"></div>');
 
-    const $quote = $('<div class="quote shp1">' + response + '</div>');
+    const $quote = $('<div class="quote shp1">' + `<span id=prompt-span>` + prompt + `</span>` + `<span id=split-span>` + split + `</span>` + `<br>` + response + '</div>');
 
     $robotHead.append($robotEyesLeft);
     $robotHead.append($robotEyesRight);
@@ -44,8 +44,10 @@ $(document).ready(function() {
       data: JSON.stringify({"prompt": prompt })
     })
     .success((response) => {
-      console.log(response.result);
-      $('#response-area').prepend(createResponse(response.result));
+      let splitMessage = response.result.split("\n\n")
+      let input = splitMessage[0]
+      let msg = splitMessage[1]
+      $('#response-area').prepend(createResponse(response.prompt, input, msg));
     })
   })
 });

@@ -36,7 +36,8 @@ app.post("/generate", (req, res) => {
       presence_penalty: 0.0,
       stop: ["You:"],
     })
-    res.status(200).json({ result: response.data.choices[0].text });
+    let promptMessage = JSON.parse(response.config.data);
+    res.status(200).json({ prompt: promptMessage.prompt, result: response.data.choices[0].text });
   }
   generate();
 });

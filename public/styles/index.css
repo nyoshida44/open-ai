@@ -6,6 +6,14 @@ h1, label, h5, button {
   font-family: 'Koulen', cursive;
 }
 
+#prompt-span {
+  color: black;
+}
+
+#split-span {
+  color: red;
+}
+
 .robot {
   position: relative;
   height: 100px;
