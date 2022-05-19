@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   const createResponse = (prompt, split, response) => {
 
-    const $responseDiv = $('<div class="col-12 d-flex align-items-center"></div>');
+    const $responseDiv = $('<div id="response" class="col-12 d-flex align-items-center"></div>');
 
     const $robot = $('<div class="robot"></div>');
     const $robotHead = $('<div class="robot-head"></div>');
@@ -48,7 +48,7 @@ $(document).ready(function() {
       let splitMessage = response.result.split("\n\n")
       let input = splitMessage[0]
       let msg = splitMessage[1]
-      $('#response-area').prepend(createResponse(response.prompt, input, msg));
+      $('#response').replaceWith(createResponse(response.prompt, input, msg));
     })
   })
 });
