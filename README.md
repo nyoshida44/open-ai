@@ -12,7 +12,7 @@ AI Buddy will also autocomplete your messages if needs be.
 ## Dependencies
 
 - Node 16.x or above
-- NPM 5.x or above
+- NPM 8.x or above
 
 - "dotenv": "^16.0.1",
 - "ejs": "^3.1.7",
