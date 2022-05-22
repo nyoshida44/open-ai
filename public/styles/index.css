@@ -9,7 +9,7 @@ h1, label, h5, button {
 .lds-ring {
   display: inline-block;
   position: relative;
-  left: 50%;
+  left: 45%;
   width: 80px;
   height: 80px;
 }
@@ -41,6 +41,12 @@ h1, label, h5, button {
   100% {
     transform: rotate(360deg);
   }
+}
+
+#response {
+  background: white;
+  border-radius: 10px;
+  border: 1px solid lightgray;
 }
 
 #prompt-span {
