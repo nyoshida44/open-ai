@@ -1,7 +1,12 @@
 $(document).ready(function() {
 
   const createLoad = () => {
-    const $loadingDiv = $('<div id="response" class="col-12 d-flex align-items-center">Hello</div>');
+
+    const $loadingDiv = $('<div id="response" class="col-12 d-flex align-items-center"></div>');
+    const $loadingImg = $('<div class="lds-ring"><div></div><div></div><div></div><div></div></div>')
+
+    $loadingDiv.append($loadingImg);
+
     return $loadingDiv;
   }
 
