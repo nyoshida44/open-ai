@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+  const createLoad = () => {
+    const $loadingDiv = $('<div id="response" class="col-12 d-flex align-items-center">Hello</div>');
+    return $loadingDiv;
+  }
+
   const createResponse = (prompt, split, response) => {
 
     const $responseDiv = $('<div id="response" class="col-12 d-flex align-items-center"></div>');
@@ -42,7 +47,10 @@ $(document).ready(function() {
       type: "POST",
       contentType: "application/json",
       url: "/generate",
-      data: JSON.stringify({"prompt": prompt })
+      data: JSON.stringify({"prompt": prompt }),
+      beforeSend: () => {
+        $('#response').replaceWith(createLoad());
+      }
     })
     .success((response) => {
       let splitMessage = response.result.split("\n\n")
