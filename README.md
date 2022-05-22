@@ -11,7 +11,7 @@ AI Buddy will also autocomplete your messages if needs be.
 
 ## Dependencies
 
-- Node 10.x or above
+- Node 16.x or above
 - NPM 5.x or above
 
 - "dotenv": "^16.0.1",
